@@ -147,6 +147,7 @@ while loop:
             cena = "menu"
 
     elif cena == "menu":
+
         tela.fill((0, 0, 0))
 
         texto_menu = fonte.render("PONG", True, "white")
@@ -187,4 +188,4 @@ while loop:
     pygame.display.flip()
     clock.tick(FPS)
     
-    pygame.quit()
+pygame.quit()
