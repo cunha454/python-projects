@@ -18,6 +18,7 @@ jogador_1_velocidade = 0
 jogador_1_pontos = 0
 
 jogador_2 = pygame.Rect(1250, 0, 30, 150)
+jogador_2_velocidade = 0
 jogador_2_pontos = 0
 
 bola = pygame.Rect(0, 0, 15, 15)
@@ -51,6 +52,12 @@ while loop:
 
                 if evento.key == pygame.K_s:
                     jogador_1_velocidade = 5
+
+                if evento.key == pygame.K_UP:
+                    jogador_2_velocidade = -5
+
+                if evento.key == pygame.K_DOWN:
+                    jogador_2_velocidade = 5
 
                 if evento.key == pygame.K_ESCAPE:
                     cena = "menu"
@@ -90,7 +97,7 @@ while loop:
         if bola.y <= 0 or bola.y >= ALTURA - bola.height:
             bola_direcao_y *= -1
 
-        jogador_2.y = bola.y
+        jogador_2.y += jogador_2_velocidade
 
         if jogador_2.y <= 0:
             jogador_2.y = 0
@@ -122,14 +129,24 @@ while loop:
 
     elif cena == "game_over":
         tela.fill((0, 0, 0))
+        
+        if jogador_1_pontos >= 3:
+            texto_vencedor = fonte.render("Player 1 Wins", True, "white")
+        else:
+            texto_vencedor = fonte.render("Player 2 Wins", True, "white")
 
         texto_game_over = fonte.render("GAME OVER", True, "white")
-
+        
         rect_game_over = texto_game_over.get_rect(
-            center=(CENTRO_X, CENTRO_Y)
+            center=(CENTRO_X, CENTRO_Y - 40)
         )
 
+        rect_vencedor = texto_vencedor.get_rect(
+            center=(CENTRO_X, CENTRO_Y + 20)
+        
+        )
         tela.blit(texto_game_over, rect_game_over)
+        tela.blit(texto_vencedor, rect_vencedor)
 
         for evento in pygame.event.get():
 
