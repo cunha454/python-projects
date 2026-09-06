@@ -1,1 +1,13 @@
+greenlet==3.5.5
+markdown-it-py==4.2.0
+mdurl==0.1.2
+mysql-connector-python==26.7.0
+prompt_toolkit==3.0.53
 pygame==2.6.1
+Pygments==2.21.0
+python-dotenv==1.2.3
+questionary==2.1.1
+rich==15.0.0
+SQLAlchemy==2.0.52
+typing_extensions==4.16.0
+wcwidth==0.8.3
