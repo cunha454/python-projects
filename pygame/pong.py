@@ -1,4 +1,5 @@
 import pygame
+from pathlib import Path
 
 pygame.init()
 pygame.font.init()
@@ -31,7 +32,7 @@ fonte = pygame.font.Font(None, 50)
 placar_jogador_1 = fonte.render(str(jogador_1_pontos), True, "white")
 placar_jogador_2 = fonte.render(str(jogador_2_pontos), True, "white")
 
-derrota_som = pygame.mixer.Sound("pygame/assets/efeitos_sonoros/fah.mp3")
+derrota_som = pygame.mixer.Sound(Path(__file__).parent / "assets" / "efeitos_sonoros" / "fah.mp3")
 
 cena = "menu"
 tempo_game_over = 0
