@@ -1,0 +1,6 @@
+greenlet==3.5.5
+mysql-connector-python==26.7.0
+python-dotenv==1.2.3
+SQLAlchemy==2.0.52
+typing_extensions==4.16.0
+questionary==2.1.1
