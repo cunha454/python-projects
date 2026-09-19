@@ -1,0 +1,3 @@
+questionary==2.1.1
+requests
+rich==15.0.0
