@@ -1,17 +1,42 @@
-# Pequenos projetos
+# Pequenos projetos Python
 
-Repositório para estudos e prática de **Python**.
+Repositório com projetos desenvolvidos para estudo e prática de Python.
 
 ## Projetos
 
 ### API Python
 
-Projetos de consumo de APIs com `requests`, incluindo operações CRUD e uso de `rich` e `questionary`.
+Scripts de terminal que consomem uma API online, com operações CRUD para
+bibliotecas, autores e serviços.
+
+Instruções de instalação e execução:
+
+[`api_python/README.md`](api_python/README.md)
 
 ### Pygame
 
-**Pong:** jogo com movimentação, colisões, pontuação, textos, efeitos sonoros e esquema de telas.
+Jogo Pong desenvolvido com Pygame, com movimentação, colisões, pontuação,
+efeitos sonoros e diferentes telas.
+
+Instruções de instalação e execução:
+
+[`pygame/README.md`](pygame/README.md)
 
 ### SQLAlchemy
 
-Projeto utilizando SQLAlchemy para estudo e prática de banco de dados com Python, incluindo criação de modelos, conexão com banco de dados e operações CRUD.
+Aplicação de terminal para gerenciamento de livros e autores em um banco de
+dados MySQL, utilizando SQLAlchemy e operações CRUD.
+
+O projeto também possui um script opcional com dados iniciais: 10 autores e 20
+livros.
+
+Instruções de instalação, configuração e execução:
+
+[`sqlalchemy/README.md`](sqlalchemy/README.md)
+
+## Requisitos gerais
+
+- Python instalado;
+- Git, caso queira clonar o repositório;
+- MySQL ativo para executar o projeto `sqlalchemy`;
+- dependências instaladas conforme o README de cada projeto.
