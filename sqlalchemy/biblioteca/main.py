@@ -94,7 +94,7 @@ def alterar_autor():
 
     id_autor = int(input("Digite o ID do autor que deseja alterar: "))
 
-    livro = session.query(Autor).filter_by(id=id_autor).first()
+    autor = session.query(Autor).filter_by(id=id_autor).first()
 
     autor.nome = input("Digite o novo nome: ")
     autor.data_nascimento = datetime.strptime(input("Digite a nova data de nascimento (dd/mm/yyyy): "), "%d/%m/%Y").date()
